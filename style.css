@@ -4,8 +4,16 @@ body {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#161616), to(#636363));
   background-image: linear-gradient(to bottom, #161616, #636363);
   background-attachment: fixed;
-  color: white;
+  color: #f0f0f0;
   font-family: "Calibri", "Arial", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
 }
 
 body header {
@@ -30,11 +38,11 @@ body header h1 {
   font-size: 5rem;
   font-style: italic;
   text-align: center;
-  text-shadow: black 1px 1px 5px;
+  text-shadow: black 1px 1px 3px;
 }
 
 body main {
-  margin: 0 10vw;
+  margin: 0 10vw 5vh 10vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,7 +61,7 @@ body main > * {
 
 body main .subheading {
   margin: 2rem;
-  padding: 2rem;
+  padding: 1rem 5rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -62,18 +70,18 @@ body main .subheading {
   border-top-width: 3px;
   border-bottom-width: 3px;
   border-style: solid;
-  border-image-source: radial-gradient(circle, #b0b0b0 0%, #b0b0b0 35%, rgba(176, 176, 176, 0) 100%);
+  border-image-source: radial-gradient(circle, #b0b0b0 0%, transparent 100%);
   border-image-slice: 50 0 50 0;
 }
 
 body footer {
   display: -ms-grid;
   display: grid;
-  margin-top: 5vh;
+  margin-top: auto;
   -ms-grid-columns: 50% 50%;
       grid-template-columns: 50% 50%;
-  background-color: #707070;
-  min-height: 20vh;
+  background-color: #2a2a2a;
+  min-height: 15vh;
 }
 
 body footer > section {
@@ -91,6 +99,12 @@ body footer > section {
 
 body footer > section h2 {
   margin-bottom: 1rem;
+  font-size: 2rem;
+  text-shadow: black 1px 1px 3px;
+}
+
+body footer > section p {
+  font-size: 1rem;
 }
 
 body footer > section > * {
@@ -115,7 +129,7 @@ body .projects-container {
   margin: 2rem;
 }
 
-body .projects-container > div {
+body .projects-container > article {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -140,7 +154,7 @@ body .projects-container > div {
   min-height: 20vh;
 }
 
-body .projects-container > div p {
+body .projects-container > article p {
   font-size: 1.25rem;
 }
 
@@ -157,7 +171,7 @@ body .projects-container .project > * {
 
 body .projects-container .project h3 {
   font-size: 2rem;
-  text-shadow: black 1px 1px 5px;
+  text-shadow: black 1px 1px 3px;
 }
 
 button,
