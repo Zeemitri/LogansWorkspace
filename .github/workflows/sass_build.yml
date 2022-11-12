@@ -16,8 +16,8 @@ jobs:
             fetch-depth: 10
             submodules: true
 
-      - name: Make destination directory for compiled CSS
-        run: mkdir -vp /tmp/repo-name/assets/css
+      # - name: Make destination directory for compiled CSS
+      #   run: mkdir -vp /tmp/repo-name/assets/css
 
       - name: Compile CSS from SCSS files
         uses: gha-utilities/sass-build@v0.4.10
@@ -38,7 +38,7 @@ jobs:
         run: |
           git config --local user.email 'action@github.com'
           git config --local user.name 'GitHub Action'
-          git add assets/css/*
+          git add styles/*.css
           git commit -m 'Updates compiled CSS files'
 
       - name: Push changes
