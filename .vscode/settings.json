@@ -1,0 +1,12 @@
+{
+  // Live Sass Compiler VS Code Extension settings
+  // Sets scss files to be compiled to a different directory
+  // `~` indicates the location of the starting scss file
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "~/../css"
+    }
+  ]
+}
