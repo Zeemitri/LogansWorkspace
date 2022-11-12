@@ -1,5 +1,6 @@
 @import "./base/colours.scss";
 @import "./base/typography.scss";
+@import "./components/tabs.scss";
 
 body {
   $shadow: black 1px 1px 3px;
@@ -80,46 +81,6 @@ body {
       & > * {
         margin: 0;
         padding: 0;
-      }
-    }
-  }
-
-  .tab-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-
-    .tab-btn {
-      background-color: transparent;
-      border: none;
-      border-bottom: 1px solid $lgray;
-      border-radius: 0;
-      color: $unwhite;
-      padding: 10px 0;
-      margin: 10px 0;
-      outline: none;
-      width: 15%;
-
-      &:hover {
-        border-bottom: 2px solid $lgreen;
-      }
-
-      &.active {
-        border-bottom: 2px solid $dgreen;
-        font-weight: bold;
-      }
-    }
-  }
-
-  .tab-content-container {
-    width: 100%;
-
-    .tab-content {
-      display: none;
-
-      &.active {
-        display: block;
       }
     }
   }
