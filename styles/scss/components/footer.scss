@@ -3,7 +3,7 @@ footer {
   margin-top: auto;
   grid-template-columns: 50% 50%;
 
-  background-color: #393b3d;
+  background-color: $footergray;
   min-height: 15vh;
 
   & > section {
