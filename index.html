@@ -4,41 +4,60 @@
     <title>Logan's Workspace</title>
     <link rel="stylesheet" href="styles/css/main.css" />
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-    <meta property="og:title" content="Logans Workspace">
-    <meta property="og:description" content="Making projects for Roblox, Minecraft, and possibly more soon!">
-    <meta property="og:image" content="./images/lw_logo.jpg">
+    <meta property="og:title" content="Logans Workspace" />
+    <meta
+      property="og:description"
+      content="Making projects for Roblox, Minecraft, and possibly more soon!"
+    />
+    <meta property="og:image" content="./images/lw_logo.jpg" />
+
+    <script src="scripts/tabs.js" defer></script>
   </head>
   <body>
     <header>
       <h1>Logan's Workspace</h1>
     </header>
     <main>
-      <h2 class="subheading">Projects</h2>
-      <section class="projects-container">
-        <article
-          class="project"
-          style="background-image: url('./images/kronos_void.png')"
+      <div class="tab-container">
+        <button class="tab-btn active" data-for-tab="1">
+          Projects
+        </button>
+        <button class="tab-btn" data-for-tab="2">Store</button>
+        <button class="tab-btn" data-for-tab="3">News</button>
+      </div>
+
+      <div class="tab-content-container">
+        <div
+          class="projects-container tab-content active"
+          data-tab="1"
         >
-          <h3>KronosVoid</h3>
-          <a
-            href="https://www.roblox.com/games/11435662668/KronosVoid"
-            class="button-link"
-            >View</a
+          <article
+            class="project"
+            style="background-image: url('./images/kronos_void.png')"
           >
-        </article>
-        <article
-          class="project"
-          style="background-image: url('./images/rumble.png')"
-        >
-          <h3>Rumble</h3>
-          <a
-            href="https://www.roblox.com/games/9725919081/Rumble"
-            class="button-link"
-            >View</a
+            <h3>KronosVoid</h3>
+            <a
+              href="https://www.roblox.com/games/11435662668/KronosVoid"
+              class="button-link"
+              >View</a
+            >
+          </article>
+          <article
+            class="project"
+            style="background-image: url('./images/rumble.png')"
           >
-        </article>
-        <article><p>More to come soon.</p></article>
-      </section>
+            <h3>Rumble</h3>
+            <a
+              href="https://www.roblox.com/games/9725919081/Rumble"
+              class="button-link"
+              >View</a
+            >
+          </article>
+          <article><p>More to come soon.</p></article>
+        </div>
+        <div class="tab-content" data-tab="2">2</div>
+        <div class="tab-content" data-tab="3">3</div>
+      </div>
     </main>
     <footer>
       <section>
