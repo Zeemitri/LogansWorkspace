@@ -1,11 +1,15 @@
+@font-face {
+  font-family: "Gotham";
+  src: url("fonts/GothamMedium_1.ttf");
+}
+
 body {
   margin: 0;
   padding: 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#232527), to(#232527));
-  background-image: #232527;
+  background-color: #232527;
   background-attachment: fixed;
   color: #f0f0f0;
-  font-family: "Calibri", "Arial", sans-serif;
+  font-family: "Gotham", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -80,7 +84,7 @@ body footer {
   margin-top: auto;
   -ms-grid-columns: 50% 50%;
       grid-template-columns: 50% 50%;
-  background-color: #393B3D;
+  background-color: #393b3d;
   min-height: 15vh;
 }
 
@@ -174,18 +178,18 @@ body .projects-container .project h3 {
   text-shadow: black 1px 1px 3px;
 }
 
-button,
-.button-link {
+body button,
+body .button-link {
   margin: 1rem;
   padding: 0.5rem 2rem;
   font-size: 1.5rem;
-  color: white;
+  color: #f0f0f0;
   text-decoration: none;
   background-color: #00b06f;
   border-radius: 8px;
 }
 
-a {
+body a {
   color: #00ffa2;
 }
 /*# sourceMappingURL=style.css.map */

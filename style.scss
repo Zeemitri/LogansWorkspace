@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Gotham";
+  src: url("fonts/GothamMedium_1.ttf");
+}
+
 body {
   $shadow: black 1px 1px 3px;
 
@@ -12,12 +17,12 @@ body {
   margin: 0;
   padding: 0;
 
-  background-image: linear-gradient(to bottom, $unblack, $dgray);
+  background-color: #232527;
   background-attachment: fixed;
 
   color: $unwhite;
 
-  font-family: "Calibri", "Arial", sans-serif;
+  font-family: "Gotham", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
 
   display: flex;
   flex-direction: column;
@@ -77,7 +82,7 @@ body {
     margin-top: auto;
     grid-template-columns: 50% 50%;
 
-    background-color: $lightblack;
+    background-color: #393b3d;
     min-height: 15vh;
 
     & > section {
@@ -148,21 +153,21 @@ body {
       }
     }
   }
-}
 
-button,
-.button-link {
-  margin: 1rem;
-  padding: 0.5rem 2rem;
+  button,
+  .button-link {
+    margin: 1rem;
+    padding: 0.5rem 2rem;
 
-  font-size: 1.5rem;
-  color: $unwhite;
-  text-decoration: none;
+    font-size: 1.5rem;
+    color: $unwhite;
+    text-decoration: none;
 
-  background-color: $dgreen;
-  border-radius: 8px;
-}
+    background-color: $dgreen;
+    border-radius: 8px;
+  }
 
-a {
-  color: $lgreen;
+  a {
+    color: $lgreen;
+  }
 }
