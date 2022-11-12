@@ -1,6 +1,6 @@
 body {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#222), to(#666));
-  background-image: linear-gradient(to bottom, #222, #666);
+  background-image: linear-gradient(to bottom, #222, rgb(59, 59, 59));
   background-attachment: fixed;
   color: white;
 }
