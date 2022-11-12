@@ -1,38 +1,8 @@
-@font-face {
-  font-family: "Gotham";
-  src: url("/fonts/GothamLight.ttf");
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Gotham";
-  src: url("/fonts/GothamMedium.ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Gotham";
-  src: url("/fonts/GothamBold.ttf");
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Gotham";
-  src: url("/fonts/GothamBlack.ttf");
-  font-weight: 900;
-  font-style: normal;
-}
+@import "./base/colours.scss";
+@import "./base/typography.scss";
 
 body {
   $shadow: black 1px 1px 3px;
-
-  $unblack: #161616;
-  $lblack: #2a2a2a;
-  $dgray: #636363;
-  $lgray: #b0b0b0;
-  $unwhite: #f0f0f0;
-  $dgreen: #00b06f;
-  $lgreen: #00ffa2;
 
   margin: 0;
   padding: 0;
@@ -80,21 +50,6 @@ body {
 
     & > * {
       width: 100%;
-    }
-
-    .subheading {
-      margin: 2rem;
-      padding: 1rem 5rem;
-      width: fit-content;
-
-      font-size: 2.5rem;
-      text-align: center;
-
-      border-top-width: 3px;
-      border-bottom-width: 3px;
-      border-style: solid;
-      border-image-source: radial-gradient(circle, $lgray 0%, transparent 100%);
-      border-image-slice: 50 0 50 0;
     }
   }
 
