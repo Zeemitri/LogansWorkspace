@@ -22,8 +22,8 @@ jobs:
       - name: Compile CSS from SCSS files
         uses: gha-utilities/sass-build@v0.4.10
         with:
-          source: /styles/style.scss
-          destination: /tmp/repo-name/styles/style.css
+          source: styles/style.scss
+          destination: styles/style.css
 
       - name: Checkout destination Git branch
         uses: actions/checkout@v2
