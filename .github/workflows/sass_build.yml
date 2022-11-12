@@ -21,39 +21,21 @@ jobs:
       - name: Compile CSS from SCSS files
         uses: gha-utilities/sass-build@v0.4.10
         with:
-          source: ./styles/style.scss
-          destination: ./styles/css/style.css
-
+          source: ./styles/scss/main.scss
+          destination: ./styles/css/main.css
 
       - name: List files
         run: ls -a ./styles/css || mkdir -vp ./styles/css
-
-      # - name: Checkout destination Git branch
-      #   uses: actions/checkout@v2
-      #   with:
-      #     ref: main
-      #     fetch-depth: 1
 
       - name: Add and Commit changes to main branch
         run: |
           git config --local user.email 'action@github.com'
           git config --local user.name 'GitHub Action'
           git add ./styles/css/
-          git commit -m 'Updates compiled CSS files'
+          git commit -m 'Compiled SCSS files to CSS'
 
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: main
-
-      # - name: Initialize Pull Request
-      #   uses: gha-utilities/init-pull-request@v0.0.4
-      #   with:
-      #     pull_request_token: ${{ secrets.GITHUB_TOKEN }}
-      #     head: pr-pages
-      #     base: main
-      #     title: 'Updates site files from latest Actions build'
-      #     body: >
-      #       Perhaps a multi-line description
-      #       about latest features and such.
