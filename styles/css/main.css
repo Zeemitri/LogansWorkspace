@@ -26,6 +26,69 @@
   font-style: normal;
 }
 
+footer {
+  display: -ms-grid;
+  display: grid;
+  margin-top: auto;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  background-color: #393b3d;
+  min-height: 15vh;
+}
+
+footer > section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.2rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+footer > section h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  text-shadow: black 1px 1px 3px;
+}
+
+footer > section p {
+  font-size: 1rem;
+}
+
+footer > section > * {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  min-height: 35vh;
+  background-image: url("/images/header_bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header h1 {
+  font-size: 5rem;
+  font-style: italic;
+  text-align: center;
+  text-shadow: black 1px 1px 3px;
+}
+
 .tab-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -72,31 +135,6 @@
   display: block;
 }
 
-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  min-height: 35vh;
-  background-image: url("/images/header_bg.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-header h1 {
-  font-size: 5rem;
-  font-style: italic;
-  text-align: center;
-  text-shadow: black 1px 1px 3px;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -131,44 +169,6 @@ body main {
 
 body main > * {
   width: 100%;
-}
-
-body footer {
-  display: -ms-grid;
-  display: grid;
-  margin-top: auto;
-  -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
-  background-color: #393b3d;
-  min-height: 15vh;
-}
-
-body footer > section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 0.2rem;
-  padding: 2rem;
-  text-align: center;
-}
-
-body footer > section h2 {
-  margin-bottom: 1rem;
-  font-size: 2rem;
-  text-shadow: black 1px 1px 3px;
-}
-
-body footer > section p {
-  font-size: 1rem;
-}
-
-body footer > section > * {
-  margin: 0;
-  padding: 0;
 }
 
 body .projects-container {

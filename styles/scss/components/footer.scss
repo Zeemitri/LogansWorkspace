@@ -1,0 +1,30 @@
+footer {
+  display: grid;
+  margin-top: auto;
+  grid-template-columns: 50% 50%;
+
+  background-color: #393b3d;
+  min-height: 15vh;
+
+  & > section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+
+    padding: 2rem;
+    text-align: center;
+
+    h2 {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      text-shadow: $shadow;
+    }
+    p {
+      font-size: 1rem;
+    }
+    & > * {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
