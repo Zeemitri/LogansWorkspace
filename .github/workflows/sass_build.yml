@@ -16,7 +16,7 @@ jobs:
           ref: main
       
       - name: List files
-        run: ls -a ./styles/css || mkdir -vp ./styles/css
+        run: ls -a ./styles/css/ || mkdir -vp ./styles/css/
 
       - name: Compile CSS from SCSS files
         uses: gha-utilities/sass-build@v0.4.10
@@ -24,17 +24,20 @@ jobs:
           source: ./styles/style.scss
           destination: ./styles/css/style.css
 
-      - name: Checkout destination Git branch
-        uses: actions/checkout@v2
-        with:
-          ref: main
-          fetch-depth: 1
+
+      - name: List files
+        run: ls -a ./styles/css || mkdir -vp ./styles/css
+
+      # - name: Checkout destination Git branch
+      #   uses: actions/checkout@v2
+      #   with:
+      #     ref: main
+      #     fetch-depth: 1
 
       - name: Add and Commit changes to main branch
         run: |
           git config --local user.email 'action@github.com'
           git config --local user.name 'GitHub Action'
-          ls ./styles/css/
           git add ./styles/css/
           git commit -m 'Updates compiled CSS files'
 
