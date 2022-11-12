@@ -1,4 +1,9 @@
 body {
+  $shadow: black 1px 1px 5px;
+
+  margin: 0;
+  padding: 0;
+
   background-image: linear-gradient(to bottom, rgb(22, 22, 22), rgb(99, 99, 99));
   background-attachment: fixed;
 
@@ -50,8 +55,39 @@ body {
       border-top-width: 3px;
       border-bottom-width: 3px;
       border-style: solid;
-      border-image-source: radial-gradient(circle, rgba(176,176,176,1) 0%, rgba(176,176,176,1) 35%, rgba(176,176,176,0) 100%);
+      border-image-source: radial-gradient(
+        circle,
+        rgba(176, 176, 176, 1) 0%,
+        rgba(176, 176, 176, 1) 35%,
+        rgba(176, 176, 176, 0) 100%
+      );
       border-image-slice: 50 0 50 0;
+    }
+  }
+
+  footer {
+    display: grid;
+    margin-top: 5vh;
+    grid-template-columns: 50% 50%;
+
+    background-color: #707070;
+    min-height: 20vh;
+
+    & > section {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+
+      padding: 2rem;
+      text-align: center;
+
+      h2 {
+        margin-bottom: 1rem;
+      }
+      & > * {
+        margin: 0;
+        padding: 0;
+      }
     }
   }
 
@@ -100,17 +136,21 @@ body {
       }
     }
   }
+}
 
-  button,
-  .button-link {
-    margin: 1rem;
-    padding: 0.5rem 2rem;
+button,
+.button-link {
+  margin: 1rem;
+  padding: 0.5rem 2rem;
 
-    font-size: 1.5rem;
-    color: white;
-    text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
 
-    background-color: #00b06f;
-    border-radius: 8px;
-  }
+  background-color: #00b06f;
+  border-radius: 8px;
+}
+
+a {
+  color: #00ffa2;
 }
