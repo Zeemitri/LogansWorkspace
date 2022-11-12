@@ -1,9 +1,5 @@
 body {
-  $shadow: black 1px 1px 3px, black -1px -1px 3px;
-
-  margin: 0;
-
-  background-image: linear-gradient(to bottom, #555, #333);
+  background-image: linear-gradient(to bottom, rgb(22, 22, 22), rgb(99, 99, 99));
   background-attachment: fixed;
 
   color: white;
