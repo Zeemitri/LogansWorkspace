@@ -1,27 +1,30 @@
+@import "../base/colours.scss";
+
 .tab-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
 
   .tab-btn {
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid $lgray;
+    background-color: $dgray;
     border-radius: 0;
+    border: none;
+    border-bottom: 5px solid $dgray;
+
     color: $unwhite;
     padding: 10px 0;
     margin: 10px 0;
     outline: none;
     width: 15%;
 
+    flex: 1;
+
     &:hover {
-      border-bottom: 2px solid $lgreen;
+      border-bottom-color: $lgray;
     }
 
     &.active {
-      border-bottom: 2px solid $dgreen;
-      font-weight: bold;
+      border-bottom-color: $unwhite;
     }
   }
 }
