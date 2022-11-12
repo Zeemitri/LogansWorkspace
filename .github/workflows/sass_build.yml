@@ -16,8 +16,8 @@ jobs:
             fetch-depth: 10
             submodules: true
 
-      # - name: Make destination directory for compiled CSS
-      #   run: mkdir -vp /tmp/repo-name/assets/css
+      - name: Make destination directory for compiled CSS
+        run: mkdir -vp /tmp/LogansWorkspace/styles/
 
       - name: Compile CSS from SCSS files
         uses: gha-utilities/sass-build@v0.4.10
@@ -31,14 +31,14 @@ jobs:
             ref: main
             fetch-depth: 1
 
-      # - name: Move compiled CSS to path within pr-pages branch
-      #   run: mv /tmp/repo-name/styles/
+      - name: Move compiled CSS to path within pr-pages branch
+        run: mv /tmp/LogansWorkspace/styles/ /styles/
 
       - name: Add and Commit changes to pr-pages branch
         run: |
           git config --local user.email 'action@github.com'
           git config --local user.name 'GitHub Action'
-          git add styles/*.css
+          git add styles/*
           git commit -m 'Updates compiled CSS files'
 
       - name: Push changes
