@@ -191,4 +191,19 @@ body {
   a {
     color: $lgreen;
   }
+
+  span.robux {
+    display: inline-block;
+    vertical-align: middle;
+
+    background-image: url("/icons/robux.svg");
+    background-size: 1em 1em;
+    background-repeat: no-repeat;
+
+    min-width: 1em;
+    width: 1em;
+    height: 1.2em;
+
+    margin-right: 0.2em;
+  }
 }
