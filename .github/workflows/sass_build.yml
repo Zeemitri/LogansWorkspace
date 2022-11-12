@@ -6,54 +6,50 @@ on:
 
 jobs:
   build_css:
+    name: Build SCSS
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout source Git branch
         uses: actions/checkout@v2
         with:
-            ref: main
-            fetch-depth: 10
-            submodules: true
-
-      - name: Make destination directory for compiled CSS
-        run: mkdir -vp /tmp/LogansWorkspace/styles/
+          ref: main
+      
+      - name: List files
+        run: ls -a ./styles/css || mkdir -vp ./styles/css
 
       - name: Compile CSS from SCSS files
         uses: gha-utilities/sass-build@v0.4.10
         with:
-          source: styles/style.scss
-          destination: styles/style.css
+          source: ./styles/style.scss
+          destination: ./styles/style.css
 
       - name: Checkout destination Git branch
         uses: actions/checkout@v2
         with:
-            ref: main
-            fetch-depth: 1
+          ref: main
+          fetch-depth: 1
 
-      - name: Move compiled CSS to path within pr-pages branch
-        run: mv /tmp/LogansWorkspace/styles/ /styles/
-
-      - name: Add and Commit changes to pr-pages branch
+      - name: Add and Commit changes to main branch
         run: |
           git config --local user.email 'action@github.com'
           git config --local user.name 'GitHub Action'
-          git add styles/*
+          git add ./styles/*
           git commit -m 'Updates compiled CSS files'
 
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: pr-pages
+          branch: main
 
-      - name: Initialize Pull Request
-        uses: gha-utilities/init-pull-request@v0.0.4
-        with:
-          pull_request_token: ${{ secrets.GITHUB_TOKEN }}
-          head: pr-pages
-          base: main
-          title: 'Updates site files from latest Actions build'
-          body: >
-            Perhaps a multi-line description
-            about latest features and such.
+      # - name: Initialize Pull Request
+      #   uses: gha-utilities/init-pull-request@v0.0.4
+      #   with:
+      #     pull_request_token: ${{ secrets.GITHUB_TOKEN }}
+      #     head: pr-pages
+      #     base: main
+      #     title: 'Updates site files from latest Actions build'
+      #     body: >
+      #       Perhaps a multi-line description
+      #       about latest features and such.
