@@ -1,4 +1,4 @@
-@import "../base/colours.scss";
+@import "../base/_colours.scss";
 
 .tab-container {
   display: flex;
@@ -9,7 +9,7 @@
     background-color: $footergray;
     border-radius: 0;
     border: none;
-    border-bottom: 5px solid $dgray;
+    border-bottom: 5px solid $footergray;
 
     color: $unwhite;
     padding: 10px 0;
