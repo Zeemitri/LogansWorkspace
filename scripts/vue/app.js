@@ -1,5 +1,7 @@
-import { createApp } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
-import TabSystem from "./TabSystem.js"
+import { createApp } from "vue"
+
+import TabsWrapper from "./TabsWrapper.js"
+import SectionTab from "./SectionTab.js"
 
 const app = createApp({
   data() {
@@ -8,7 +10,8 @@ const app = createApp({
     }
   },
   components: {
-    "tab-system": TabSystem,
+    "tabs-wrapper": TabsWrapper,
+    "section-tab": SectionTab,
   },
   methods: {
     isActive(menuItem) {

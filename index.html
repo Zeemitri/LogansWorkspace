@@ -11,6 +11,13 @@
     />
     <meta property="og:image" content="./images/lw_logo.jpg" />
 
+    <script type="importmap">
+      {
+        "imports": {
+          "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+        }
+      }
+    </script>
     <script type="module" src="scripts/vue/app.js"></script>
   </head>
   <body>
@@ -19,8 +26,46 @@
     </header>
     <main>
       <div id="app">
-        <tab-system :titles="['Projects', 'Store', 'News']">
-        </tab-system>
+        <tabs-wrapper>
+          <section-tab title="Projects" class="projects-container">
+            <article
+              class="project"
+              style="background-image: url('./images/kronos_void.png')"
+            >
+              <h3>KronosVoid</h3>
+              <a
+                href="https://www.roblox.com/games/11435662668/KronosVoid"
+                class="button-link"
+                >View</a
+              >
+            </article>
+            <article
+              class="project"
+              style="background-image: url('./images/rumble.png')"
+            >
+              <h3>Rumble</h3>
+              <a
+                href="https://www.roblox.com/games/9725919081/Rumble"
+                class="button-link"
+                >View</a
+              >
+            </article>
+            <article><p>More to come soon.</p></article></section-tab
+          >
+          <section-tab title="Store">
+            <tabs-wrapper>
+              <section-tab title="KronosVoid">
+                kronoosvoidio
+              </section-tab>
+              <section-tab title="Rumble">
+                rumbble
+              </section-tab>
+            </tabs-wrapper>
+          </section-tab>
+          <section-tab title="News">
+            3
+          </section-tab>
+        </tabs-wrapper>
       </div>
     </main>
     <footer>
