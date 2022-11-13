@@ -2,6 +2,7 @@ import { createApp } from "vue"
 
 import TabsWrapper from "./TabsWrapper.js"
 import SectionTab from "./SectionTab.js"
+import StoreItem from "./StoreItem.js"
 
 const app = createApp({
   data() {
@@ -12,6 +13,7 @@ const app = createApp({
   components: {
     "tabs-wrapper": TabsWrapper,
     "section-tab": SectionTab,
+    "store-item": StoreItem,
   },
   methods: {
     isActive(menuItem) {

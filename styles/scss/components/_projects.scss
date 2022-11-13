@@ -1,4 +1,4 @@
-@import "../base/_variables.scss";
+@import "../mixins/_shadow.scss";
 
 .projects-container {
   display: flex;
@@ -41,7 +41,8 @@
 
     h3 {
       font-size: 2rem;
-      text-shadow: $shadow;
+
+      @include text-shadow();
     }
   }
 }

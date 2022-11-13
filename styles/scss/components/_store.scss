@@ -1,0 +1,45 @@
+@import "../mixins/_button.scss";
+@import "../mixins/_shadow.scss";
+
+.store-container {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: start;
+  align-items: flex-start;
+
+  gap: 1rem;
+  margin: 1rem 0;
+
+  .store-item {
+    border-radius: 50%;
+    padding: 2rem;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 5rem;
+    height: 5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    user-select: none;
+    
+    h3 {
+      font-size: 1rem;
+      @include text-shadow();
+    }
+
+    .store-button {
+      @include button-base();
+      
+      min-width: 60%;
+      padding: 0.75rem;
+      text-align: center;
+    }
+  }
+}

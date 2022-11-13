@@ -1,4 +1,4 @@
-@import "../base/_variables.scss";
+@import "../mixins/_shadow.scss";
 
 header {
   display: flex;
@@ -18,6 +18,6 @@ header {
     font-style: italic;
     text-align: center;
 
-    text-shadow: $shadow;
+    @include text-shadow();
   }
 }

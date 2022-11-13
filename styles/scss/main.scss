@@ -1,10 +1,11 @@
 @import "./base/_colours.scss";
 @import "./base/_typography.scss";
-@import "./base/_variables.scss";
 @import "./components/_footer.scss";
 @import "./components/_header.scss";
 @import "./components/_projects.scss";
+@import "./components/_store.scss";
 @import "./components/_tabs.scss";
+@import "./mixins/_button.scss";
 
 
 body {
@@ -38,15 +39,11 @@ body {
 
   button,
   .button-link {
+    @include button-base();
+
     margin: 1rem;
     padding: 0.5rem 2rem;
-
     font-size: 1.5rem;
-    color: $unwhite;
-    text-decoration: none;
-
-    background-color: $dgreen;
-    border-radius: 8px;
   }
 
   a {

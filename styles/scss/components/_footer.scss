@@ -1,4 +1,5 @@
 @import "../base/_colours.scss";
+@import "../mixins/_shadow.scss";
 
 footer {
   display: grid;
@@ -19,7 +20,8 @@ footer {
     h2 {
       margin-bottom: 1rem;
       font-size: 2rem;
-      text-shadow: $shadow;
+
+      @include text-shadow();
     }
     p {
       font-size: 1rem;
