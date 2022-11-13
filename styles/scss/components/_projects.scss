@@ -33,16 +33,20 @@
 
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
+    
+    transition: background-size ease-in-out 250ms;
+    &:hover {
+      background-size: 110%;
+    }
 
     & > * {
       margin: 0;
     }
 
     h3 {
-      font-size: 2rem;
-
       @include text-shadow();
+      font-size: 2rem;
     }
   }
 }
