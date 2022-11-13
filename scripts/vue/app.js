@@ -1,7 +1,7 @@
 import { createApp } from "vue"
 
-import TabsWrapper from "./TabsWrapper.js"
-import SectionTab from "./SectionTab.js"
+import TabSystem from "./TabSystem.js"
+import TabSystemTab from "./TabSystemTab.js"
 import StoreItem from "./StoreItem.js"
 
 const app = createApp({
@@ -11,8 +11,8 @@ const app = createApp({
     }
   },
   components: {
-    "tabs-wrapper": TabsWrapper,
-    "section-tab": SectionTab,
+    "tab-system": TabSystem,
+    "tab-system-tab": TabSystemTab,
     "store-item": StoreItem,
   },
   methods: {
