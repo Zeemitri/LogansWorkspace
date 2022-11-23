@@ -22,7 +22,7 @@
       <h1 id="title">Post Title</h1>
     </header>
     <main>
-      <div id="post-content">post content</div>
+      <div id="news-post-content">post content</div>
       <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
       <script>
         const params = new URLSearchParams(window.location.search)
@@ -39,7 +39,7 @@
             const split = data.split("---")
             const metadata = JSON.parse(split[0])
             const content = split[1]
-            document.getElementById("post-content").innerHTML =
+            document.getElementById("news-post-content").innerHTML =
               marked.parse(content)
 
             if(metadata.title) {
