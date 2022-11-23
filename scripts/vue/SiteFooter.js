@@ -10,9 +10,7 @@ export default {
       <section>
         <h2>Links</h2>
         <a href="//youtube.com/channel/UC_D3LnfeFVnC8AiB14kBVpg">Youtube</a>
-        <a href="//roblox.com/groups/5550359/Logans-Workspace#!/about"
-          >Roblox Group</a
-        >
+        <a href="//roblox.com/groups/5550359/Logans-Workspace#!/about">Roblox Group</a>
         <a href="//discord.gg/nmFk4e9zWg">Discord</a>
         <a href="//twitter.com/Logans_WS">Twitter</a>
       </section>
