@@ -1,6 +1,6 @@
 {
   "banner": "/images/breakouttease1.png",
-  "title": "Breakout"
+  "title": "Breakout Update"
 }
 ---
 Written by @Zeemitri (11/23/22 @ 2:06AM)
