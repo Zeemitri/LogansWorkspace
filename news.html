@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Post</title>
+    <link rel="stylesheet" href="styles/css/main.css" />
+
+    <script type="importmap">
+      {
+        "imports": {
+          "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+        }
+      }
+    </script>
+    <script type="module" src="scripts/vue/app.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1 id="title">Post Title</h1>
+    </header>
+    <main>
+      <div id="post-content">post content</div>
+      <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+      <script>
+        const params = new URLSearchParams(window.location.search)
+
+        fetch(`/posts/${params.get("name")}.md`)
+          .then((response) => {
+            if (!response.ok) {
+              console.log(response)
+              return "Unknown post."
+            }
+            return response.text()
+          })
+          .then((data) => {
+            const split = data.split("---")
+            const metadata = JSON.parse(split[0])
+            const content = split[1]
+            document.getElementById("post-content").innerHTML =
+              marked.parse(content)
+
+            if(metadata.title) {
+              const heading = document.querySelector("#title").textContent = metadata.title
+              const tabTitle = document.querySelector("title").textContent = metadata.title
+            }
+            if (metadata.banner) {
+              const header = document.querySelector("header")
+              header.style.backgroundImage = `url(${metadata.banner})`
+            }
+          })
+      </script>
+    </main>
+    <div id="app">
+      <site-footer></site-footer>
+    </div>
+  </body>
+</html>
