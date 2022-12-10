@@ -1,6 +1,6 @@
 {
   "banner": "/images/atlastease.png",
-  "title": "Breakout: Update #1"
+  "title": "The Atlas Skin"
 }
 ---
 Written by @Zeemitri (12/10/22 @ 0:00AM)
@@ -11,4 +11,4 @@ Surprise! The Atlas will be getting it's own skin in Rumble. In order to recieve
 Play Atlas Here! 
 https://www.roblox.com/games/5829735261/ATLAS-JUDGEMENT 
 
-[def]: /images/atlastease.png
+![](/images/atlastease.png)
