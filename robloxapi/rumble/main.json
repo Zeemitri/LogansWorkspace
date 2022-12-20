@@ -1,19 +1,19 @@
 {
-	"EventFlags": {
-		"Alert": {
-			"Enabled": true,
-			"Title": "WARNING",
-			"Message": "This game is currently in ALPHA, Meaning most features are buggy or not finished!"
-		},
-		"Downtime": {
-			"Enabled": false,
-			"downtimeMessage": "Rumble is currently in Downtime to update to ALPHA V0.10_00"
-		},
-		"Gamemodes": {
-			"Sandbox": true,
-			"Survival": false,
-			"FFA": false,
-			"Event": false
-		}
-	}
+    "EventFlags": {
+        "Alert": {
+            "Enabled": true,
+            "Title": "LIVE EVENT SOON",
+            "Message": "IF YOU HAVE PHOTOSENSITIVE EPILEPSY IT IS ADVISED THAT YOU DO NOT WATCH THE EVENT"
+        },
+        "Downtime": {
+            "Enabled": false,
+            "downtimeMessage": "Rumble is currently in Downtime to update to ALPHA V0.10_00"
+        },
+        "Gamemodes": {
+            "Sandbox": true,
+            "Survival": false,
+            "FFA": false,
+            "Event": false
+        }
+    }
 }
